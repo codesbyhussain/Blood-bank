@@ -1,0 +1,22 @@
+<title> Registration </title>
+<div class='main'>
+{% block content %}
+  <h2 style='background-color:#B90E0A; color:#E3E7EB'>Donor Registration</h2>
+  <form action="." method="POST" enctype="multipart/form-data" align='center'>
+    {% csrf_token %}
+    <table align='center'>
+      {{form.as_table}}
+    </table>
+    <br/>
+    <input type="submit" class="btn btn-outline-primary btn-sm" value="Submit" >
+  </form>
+{% endblock %}
+</div>
+
+<style>
+  .main{
+    text-align:center;
+    font-family:Georgia;
+    margin:auto;
+  }
+</style>

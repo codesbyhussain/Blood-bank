@@ -1,0 +1,21 @@
+<title> Appointment Set </title>
+<div class='main'>
+{% block content %}
+  <h2 style='background-color:#B90E0A; color:#E3E7EB'>Enter Your Desired Appointment Date</h2>
+  <form action="." method="POST" enctype="multipart/form-data" alin='center'>
+    {% csrf_token %}
+    <table align='center'>
+      {{form.as_table}}
+    </table>
+    <br/>
+    <input type="submit" class="btn btn-outline-primary btn-sm" value="Submit" >
+  </form>
+{% endblock %}
+</div>
+
+<style>
+  .main{
+    text-align:center;
+    font-family:Georgia;
+  }
+</style>
